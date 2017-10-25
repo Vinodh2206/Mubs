@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Groupz</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <!-- For 3D Graph -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<!--link rel="stylesheet" type="text/css" href="css/home.css"-->   
+<link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+<!--
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+-->
+    </head>
+<body>
+
+ <div class="main-wrapper" >     
+        <!--<div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>-->
+        <div ng-view></div>
+      </div>
+   
+
+  <div class="credits text-center">
+
+  </div>
+    <script data-require="ui-bootstrap@*" data-semver="0.12.1" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.min.js"></script>
+
+  <script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/d3-3.4.3.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+<!--<script src="js/angular.min.js"></script>-->
+ <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+<script src="js/ivml.0.0.0.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/dirPagination.js"></script>
+    <script src="js/angular-cookies.js"></script>
+    <script src="js/sanitize.js"></script>
+    
+  <!--<script src="js/angular.js"></script>
+  
+  
+  <script src="js/angular-animate.js"></script>
+  <script src="js/angular-count-to.js"></script>
+  <script src="js/angular-material.min.js"></script>-->
+  <script src="js/ngStorage.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/combodate.js"></script>
+<script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+  <script src="js/angular-simple-logger.js"></script>
+  <script src="js/lodash.js"></script>
+<!--
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+-->
+    
+
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGgjD4U7pwrOTDAj50Oy9M6HC4VvxNRfU&callback=initMap"
+    async defer></script>
+  <script src="js/angular-google-maps.min.js"></script>
+
+  <script src="app.js"></script>
+  <script src="app-services/authentication.service.js"></script>
+  
+  <!-- real time API storage-->
+  <script src = "app-services/user.service.js"></script>
+  <script src="app-services/flash.service.js"></script>
+  <script src="js/angular-count-to.js"></script>
+    <script src="js/angular-count-to.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <script src="js/angular-material.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="js/moment.min.js"></script>
+	<script src="js/dirPagination.js"></script>
+	<script src="js/combodate.js"></script>
+	<script src="js/metisMenu.min.js"></script>
+	<script src="js/custom.js"></script>
+
+  <!-- Fake user service for demo that uses local storage -->
+  
+
+  <script src="controller/userdata.controller.js"></script>
+  <script src="controller/login.controller.js"></script>
+    <script src="controller/submit.js"></script>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,1427 @@
+<html>
+
+<head>
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Groupz</title>
+</head>
+
+<body>
+    <style>
+    .sidenav {
+        float: left;
+        width: 250px;
+    }
+    
+    .logo {
+        width: 75px;
+        height: 50px;
+    }
+    
+    .profilepic {
+        width: 50px;
+        height: 50px;
+    }
+    
+    table {
+        border-collapse: collapse;
+        width: 35%;
+    }
+    
+    td {
+        text-align: left;
+        font-size: 30px !important;
+        padding: 10px 10px 10px 10px;
+    }
+    
+    .sectleft{
+    float:left;
+    text-align:center;
+}
+
+.sectright {
+    float:right;
+    text-align:center;
+}
+        
+         .searchicon {
+            width:400px;
+            height: 20px;
+            padding-top:10px;
+            margin-top: 5px;
+            border-radius: 15px;
+            float:right;
+
+
+        }
+
+  .col-sm-3.widget_1_box {
+padding: 0 5px;
+}
+
+
+.bg-info {
+background:#78cd51;
+padding: 3px 8px;
+color: #ffffff;
+}
+.tile-progress {
+padding: 30px;
+margin-bottom:1em;
+}
+
+
+            ul#navlist{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+ul#navlist li { display:inline-block;                         float:left;
+}
+
+         .musers {
+background: linear-gradient(110deg, #9E68B4 50%, #5E376F 50%);
+    overflow:auto;
+             color:#ffffff;
+             width: 253px;
+
+height: 150px;
+             margin-right: 10px;
+             margin-bottom: 5px;
+                  margin-top:3px;
+
+}
+.topicname {
+text-align: center;
+background: #9358AC;
+color: white;
+border-bottom: 1px solid #9358AC;
+margin-top:0px;
+height: 30px;
+}
+
+                  .musers1 {
+background: linear-gradient(110deg, #3B5998 50%, #25385F 50%);
+height: 150px;
+width: 253px;
+margin-right: 10px;margin-bottom: 5px;margin-top:3px;
+
+
+
+                       overflow:auto;
+             color:#ffffff;
+
+
+
+}
+.topicname1 {
+text-align: center;
+background: #4E69A2;
+color: white;
+border-bottom: 1px solid #3B5998;
+height: 30px;
+
+margin-top: 0px;
+}
+            .musers2 {
+background: linear-gradient(110deg, #FF7F27 50%, #F45000 50%);
+height: 150px;
+width: 253px; 
+margin-right: 10px;
+                margin-bottom: 5px;
+                                  margin-top:3px;
+
+
+overflow:auto;
+             color:#ffffff;
+
+}
+.topicname2 {
+text-align: center;
+background:  #FF934A;
+color: white;
+border-bottom: 1px solid #FF7F27;
+height: 30px;
+
+margin-top: 0px;
+}       
+
+              .musers3 {
+background: linear-gradient(110deg, #EF553A  50%, #D52F11 50%);
+height: 150px;
+width:253px;                     margin-bottom: 5px;
+                  margin-top:3px;
+
+             margin-right: 10px;
+
+                       overflow:auto;
+             color:#ffffff;
+
+}
+.topicname3 {
+text-align: center;
+background:  #F1664D ;
+color: white;
+border-bottom: 1px solid #EF553A;
+height: 30px;
+
+margin-top: 0px;
+}   
+
+    .musers4 {
+background: linear-gradient(110deg, #458DDE  50%, #1C5A9F 50%);
+height: 150px;
+width:253px;
+                          margin-top:3px;
+
+             margin-right: 10px;
+                                margin-bottom: 5px;
+
+                       overflow:auto;
+             color:#ffffff;
+
+}
+.topicname4 {
+text-align: center;
+background:  #69A4E4 ;
+color: white;
+border-bottom: 1px solid #458DDE;
+height: 30px;
+
+margin-top: 0px;
+}  
+
+            .musers5 {
+background: linear-gradient(110deg, #1cbf32  50%, #509b5a 50%);
+height: 150px;
+width:253px;
+             margin-right: 10px;
+                                  margin-top:3px;
+
+                                     margin-bottom: 5px;
+
+
+                       overflow:auto;
+             color:#ffffff;
+
+}
+.topicname5 {
+text-align: center;
+background:  #17ed69 ;
+color: white;
+border-bottom: 1px solid #1cbf32;
+height: 30px;
+margin-top: 0px;
+} 
+
+
+            #listingdashboard {
+                list-style-type: none;
+
+
+            }
+
+
+    </style>
+    <nav class="navbar top-color">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="img-responsive logo" src="css/images/Groupz.png" />
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="nav navbar-right" style="padding-top:6px;">
+                    <div class="dropdown">
+                        <span class="badge">5</span><img style="padding-right:10px;" src="css/images/bell1.png" />
+                        <span uib-dropdown is-open="status.isopen">
+     <img class="img-circle dropdown-toggle profilepic" uib-dropdown-toggle width="40" height="40" style="padding:1px" ng-src="{{model.profileurl}}" />
+      
+      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+        <li role="menuitem"><a ng-click="getProfile()">Profile</a></li>
+        <li role="menuitem"><a href="#">Preference</a></li>
+        <li role="menuitem"><a href="#/login">Logout</a></li>
+        
+      </ul>
+    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default firstmenu">
+        <div class="container-fluid">
+            <div class="  -header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Welcome - {{model.membername[0]}}</a>
+            </div>
+             <div>    
+
+        <input type = "search" class = "form-control searchicon" placeholder="Search the details"> 
+
+</div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-inverse verticalmenu" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="text-decoration:none; color:white;" href="#">Main Menu</a>
+            <br>
+            <br>
+        </div>
+        <div class="text-center">
+            <div class="well well-lg col-xs-30 text-left" style="background-color: grey;" ng-show="true">
+                <!--img class="imgsize" style="padding:1px" ng-src="{{model.profileurl}}" /><br-->
+                <a class="text-center" style="text-decoration:none; color:white;" href="#">Select account</a>
+                <br>
+                <div class="form-group">
+                    <select class="form-control" ng-model="model.selectedValue" name="groupzname" ng-change="getselectval(model.selectedValue)">
+                        <option ng-repeat="item in model.dropDownData track by $index" value="{{item}}">{{item}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav nav-right">
+                    <li ng-class="{active:isSelected(1)}" ><a href ng-click="getDashboard()"><span class="glyphicon glyphicon-dashboard"></span>Dashboard</a> </li>
+                    <li ng-class="{active:isSelected(2)}" ng-if="memberdetails.morememinfo.managegroupzbase ==1"><a href ng-click="viewAccount()"><span class ="glyphicon glyphicon-user"></span>Account</a></li>
+                    <li ng-if="memberdetails.morememinfo.loginotherusers==1"><a href="#/"><span class="glyphicon glyphicon-user"></span>Users</a></li>
+                    <li ng-if="memberdetails.morememinfo.sendmessages===1"><a href="#/Dashboard"><span class="glyphicon glyphicon-edit"></span> Messages</a></li>
+                    <li ng-if="memberdetails.morememinfo.createalbums===1"><a href="#/Dashboard"><span class="glyphicon glyphicon-tags"></span>Albums</a></li>
+                    <li ng-if="memberdetails.morememinfo.enableattendance===1"><a href="#/Dashboard"><span class="glyphicon glyphicon-off"></span>Documents</a></li>
+                    <li ng-if="memberdetails.morememinfo.createduetemplate===1"><a href="#/Dashboard"><span class="glyphicon glyphicon-off"></span> Fees</a></li>
+                    <li ng-if="memberdetails.morememinfo.createissue===1"><a href="#/Dashboard"><span class="glyphicon glyphicon-off"></span> Service Request</a></li>
+                    <li ng-if="memberdetails.morememinfo.enableattendance===1"><a href="#/Dashboard"><span class="glyphicon glyphicon-off"></span>Checklist</a></li>
+                    <li ng-if="memberdetails.morememinfo.enableattendance===1"><a href="#/Dashboard"><span class="glyphicon glyphicon-off"></span>Calendar</a></li>
+                    <li ng-if="memberdetails.morememinfo.enableattendance===1"><a href="#/Dashboard"><span class="glyphicon glyphicon-off"></span>Reports</a></li>
+                    <li ng-if="memberdetails.morememinfo.lockreceipts===1"><a href="#/Dashboard"><span class="glyphicon glyphicon-off"></span>Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div ng-if="!displayProfile && !displayAccount &&showDashboard" >
+        <div class="text-center">
+            <div class="col-xs-10" style="background:white">
+
+                <!--<div class="form-group">
+          <label class="form-control" ng-model="model.membername" name="membername" style="border:none;"> {{model.membername[0]}}</label>
+        </div>-->
+                        <article class="maindisplay">
+                              <div class="widget_1">
+     <div class="col-sm-9 widget_1_box">
+          <ul id="navlist">
+                    <li><!--<div class="musers mylisting" ng-if="memberdetails.morememinfo.loginotherusers==1">
+        <h4 class="topicname">Manage Users</h4>
+                        <section class="col-sm-5 sectleft">
+                        Awaiting Approval : {{model.awaitingapproval}}
+                        </section>
+                        <section class="col-sm-5 sectright">
+                            Total : {{model.total}}
+                        </section>
+
+        </div>-->
+                        <div class="musers mylisting">
+        <h4 class="topicname">Manage Users</h4>
+                        <section class="col-sm-5 sectleft">
+                        Awaiting Approval : {{awaitingusers}}
+                        </section>
+                        <section class="col-sm-5 sectright">
+                            Total : {{totalusers}}
+                        </section>
+
+        </div>
+
+
+                    <li>
+
+
+                         <div class="musers1 mylisting"  ng-if="memberdetails.morememinfo.enableattendance===1">
+        <h4 class="topicname1">Enquiries</h4>
+                              <section class="col-sm-5 sectleft">
+                        hi
+                        </section>
+                        <section class="col-sm-5 sectright">
+                            hhelo
+                        </section>
+
+                        </div>
+
+     </li>
+     <li>
+        <div class="musers2 mylisting"  ng-if="memberdetails.morememinfo.createalbums===1">
+        <h4 class="topicname2">Albums</h4>
+             <section class="col-sm-5 sectleft">
+                        hi
+                        </section>
+                        <section class="col-sm-5 sectright">
+                            hhelo
+                        </section>
+
+
+     </div>
+
+              </li>
+
+
+<!--
+                       <div class="clearfix"> </div>
+-->
+             <li>
+         <!--<div class="musers3" ng-if="memberdetails.morememinfo.createduetemplate===1">-->
+                      <div class="musers3">
+
+        <h4 class="topicname3">Fees (Monthly Summary)</h4>
+              <section class="col-sm-5 sectleft">
+                        Rs.{{recfeesMonthly}} received
+                        </section>
+                        <section class="col-sm-5 sectright">
+                            Rs.{{pendfeesMonthly}} pending
+                        </section>
+     </div>
+
+     </li>
+              
+<li>                
+
+              
+<li>                
+<!--<div class="musers3" ng-if="memberdetails.morememinfo.createduetemplate===1">-->
+    <div class="musers3">
+        <h4 class="topicname3">Fees (Yearly Summary)</h4>
+
+<section class="col-sm-5 sectleft">
+                        Rs.{{recfeesYearly}} received
+                        </section>
+                        <section class="col-sm-5 sectright">
+                            Rs.{{pendfeesYearly}} pending
+                        </section>
+     </div>
+     </li>
+                                  
+                    <li>
+         <!--<div class="musers3" ng-if="memberdetails.morememinfo.createduetemplate===1">-->
+                      <div class="musers5">
+
+        <h4 class="topicname5">Accounts</h4>
+              <section class="col-sm-5 sectleft">
+                        {{accounts}} Accounts
+                        </section>
+                        <section class="col-sm-5 sectright">
+                            {{total}} Total Accounts
+                        </section>
+     </div>
+
+     </li>
+<div class="musers4"  ng-if="memberdetails.morememinfo.sendmessages===1">
+        <h4 class="topicname4">Messages</h4>
+
+<section class="col-sm-5 sectleft">
+                        hi
+                        </section>
+                        <section class="col-sm-5 sectright">
+                            hhelo
+                        </section>
+     </div>
+     </li>
+         </ul>
+                </div>
+
+
+
+
+
+                 </div>
+
+
+            <div class=" col-sm-3 bdaypanels">
+            <div class="panel panel-style">
+                <div class="panel-heading bdayheading"><img src="css/images/Birthday.png" />BIRTHDAYS TODAY</div>
+                <div class="panel-body bdaybody">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="item in model.birthdays track by $index">
+                            <b ng-if="!item.profileurl && !item.name && !item.shortname && !item.role && !item.division">No Birthdays Today</b>
+                            <div ng-if="!item.profileurl"> <img class="imgsize pull-left" style="padding-right:4px" src="css/images/facebook.png" />
+                            </div>
+                            <div ng-if="item.profileurl"><img class="imgsize pull-left" style="padding-right:4px; width:80px; height:50px; align:center" src="{{item.profileurl}}" /></div>
+                            <p class="list-group-item-text tsize text-left ">{{item.name}}
+                                <br> {{item.shortname}}
+                                <br> {{item.role}}
+                                <br> {{item.division}}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+                <!--<style>
+                    .imgsize pull-left{
+                        max-width: 50px;
+                        max-height: 50px;
+                    }
+                
+                </style>-->
+                </article>
+                
+
+                              <div class="clearfix"> </div>
+
+
+            <style>
+                    
+                </style>
+
+ <article class="maindisplay">
+
+        <div class="col-sm-10 col-md-10 col-lg-2 sidenav" >
+                    <div class="well">
+                               <form class="form-row " role="form">
+                            <div class="form-group">
+                                <label class="control-label col-sm-14" for="groupz">Country*</label>
+                                <select class="form-control" ng-model="model.selectedCountry" name="country" ng-change="GetCountry(model.selectedCountry)">
+                                    <!--<option value="ALL" class selected>ALL</option>-->
+                                    <option ng-repeat=" item in model.countries track by $index" value="{{item}}">{{item}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-20" for="groupz">State*</label>
+                                <select class="form-control" ng-model="model.selectedState" name="state" ng-change="GetState(model.selectedState)" ng-disabled="model.selectedCountry == 'ALL'">
+                                    <option ng-repeat="item in model.states track by $index" value="{{item}}">{{item}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-20" for="groupz">City*</label>
+                                <select class="form-control" ng-model="model.selectedCity" name="city" ng-change="GetCity(model.selectedCity)" ng-disabled="model.selectedState == 'ALL' || model.selectedCountry== 'ALL'">
+                                    <option ng-repeat="item in model.cities track by $index" value="{{item}}">{{item}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-20" for="groupz">Center*</label>
+                                <!--<select class="form-control" multiple ng-model="model.selectedCenter" name="center" ng-change="GetCenter(model.selectedCenter)" ng-disabled="model.selectedCountry == 'ALL'">
+            <option value class selected>ALL</option>
+               <option ng-repeat="item in model.centers track by $index" value="{{item}}">{{item}}</option>
+            </select>-->
+                                <select class="form-control" 
+                                ng-model="model.selectedCenter" name="center" ng-change="GetCenter(model.selectedCenter)">
+                                  <!-- ng-disabled="model.selectedCountry == 'ALL'" -->
+                                    <!--<option value="ALL" class selected>ALL</option>-->
+                                    <option ng-repeat=" item in model.centers track by $index" value="{{item}}">{{item}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-20" for="groupz">Role*</label>
+                                <select class="form-control" ng-model="model.selectedRole" name="city" ng-change="GetRole(model.selectedRole)" >
+                               <!-- ng-disabled="model.selectedCountry == 'ALL'">-->
+                                    <option value class selected>Select Roles</option>
+                                    <option ng-repeat="item in model.roles track by $index" value="{{item}}">{{item}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" href="#" ng-click="getGraphData(); getTableData()" class="btn btn-primary btn-lg" ng-disabled="!model.selectedRole">SUBMIT</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <style>
+                .panel-chart {
+                    background-color: #F8F8FF;
+                    text-decoration: none;
+                    color: black;
+                    border: 1px solid #ddd;
+                }
+                    .alert {
+                        padding-left: 2em;
+                        padding-right: 2em;
+                       
+                    }
+                </style>
+                <div class="col-sm-6">
+                    <ul class="nav nav-pills nav-justified">
+                        <li ng-class="tab === 1? 'active' : ''"><a ng-click="changeTab(1)">Chart View</a></li>
+                        <li ng-class="tab === 2? 'active' : ''"><a ng-click="changeTab(2)">Map View</a>
+                        </li>
+                        <li ng-class="tab === 3? 'active' : ''"><a ng-click="changeTab(3)">Table View</a></li>
+                    </ul>
+                    <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" 
+			        ng-bind="flash.message" style="margin-top: 20px;"></div>
+
+                    <div ng-show="tab === 1" ng-if="drawMap && showGraph && showTable">
+                        <div class="panel panel-style">
+                            <div class="panel-heading panel-chart"><b>Chart</b></div>
+                            <div class="panel-body" ng-show="showGraph">
+                                <label>Select type of graph</label>
+                                <select class="form-control" ng-model="model.selectedGraph" ng-change="changeGraph()">
+                                    <option selected>HeadCount</option>
+                                    <option>Followup</option>
+                                </select>
+                                <br>
+                                <div id="graphContainer" style="width:480px;height:390px"></div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <style>
+                        .popup
+                        {
+                            width:69px!important;
+                        }
+                    </style>
+
+                     <div ng-show="tab === 2"  ng-if="drawMap && showGraph && showTable" >
+                    <!--<div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" 
+			        ng-bind="flash.message" style="margin-top: 20px;">-->
+                        <ui-gmap-google-map center='map.center' zoom='map.zoom'control="map.control" >
+                           <ui-gmap-marker ng-repeat="marker in markers"coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id" >
+                            <ui-gmap-window show="true" >
+                                <div class="popup" >
+                                    {{marker.content}}
+                                </div>
+                            </ui-gmap-window>
+                           </ui-gmap-marker>
+                        </ui-gmap-google-map>
+                    <!--</div>-->
+                   </div>
+                    <div ng-show="tab === 3" ng-if="drawMap && showGraph && showTable">
+                        <!--<div class="panel panel-style">-->
+                            <div><b>Table</b></div>
+                            <div ng-show="showTable">
+                                
+                                
+
+   
+        <table class="table table-striped ">
+  <thead>
+    <tr>
+      <th>{{xlabel}}</th>
+      <th>{{s1label}}</th>
+           <th>{{s2label}}</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  <tr class="tabledatas" ng-repeat="row in data track by $index">
+        <td class="tabledatas">{{row.x}}</td>
+        <td class="tabledatas">{{row.s1}}</td>
+        <td class="tabledatas">{{row.s2}}</td>
+      </tr>
+ 
+     <tr>
+      <th scope="row"></th>
+      <td id="totals">{{totalcount}}</td>
+    </tr>
+  </tbody>
+</table>
+                                
+                              
+                            </div>
+                        </div>
+                    </div>
+               
+                </article>
+                <style>
+                    
+                    .tabledatas{
+                        font-size:15px!important;
+                    }
+                                    #totals{
+                                        font-size: 18px!important;
+                                    }
+                                
+                                
+                .panel-style {
+                    background-color: #ADE7EA;
+                }
+                .angular-google-map-container {
+                    height: 400px;
+                }
+                    
+                     .bdayheading {
+            background-color: #ADE7EA;
+        }
+
+            .bdaybody {
+                background: #f4f4f4;
+            }
+                </style>
+                <aside>
+               <div class=" col-sm-3 bdaypanels">
+            <div class="panel panel-style">
+                <div class="panel-heading bdayheading"><img src="css/images/Birthday.png" />ANNIVERSARY TODAY</div>
+                <div class="panel-body bdaybody">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="item in model.anniversary track by $index">
+                            <b ng-if="!item.profileurl && !item.name && !item.shortname && !item.role && !item.division">No Anniversary Today</b>
+                            <div ng-if="!item.profileurl"> <img class="imgsize pull-left" style="padding-right:4px" src="css/images/facebook.png" />
+                            </div>
+                            <div ng-if="item.profileurl"><img class="imgsize pull-left" style="padding-right:4px" src="{{item.profileurl}}" /></div>
+                            <p class="list-group-item-text tsize text-left ">{{item.name}}
+                                <br> {{item.shortname}}
+                                <br> {{item.role}}
+                                <br> {{item.division}}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+                </div>
+           
+                </aside>
+        </div>
+    </div>
+    </div>
+        
+         <!--Accounts new work start here-->
+   
+<div class="col-md-6 col-sm-6 col-lg-10 text-left" ng-if="displayAccount" >
+			<div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" 
+			 	 ng-if="flash" ng-bind="flash.message" style="margin-top: 20px;"></div>
+			<!--Inside Form Div--> 
+    <br>
+			     
+    
+    <style>
+        .stylethistitle{
+            font-family: inherit;
+           font-weight: bold;
+           
+        }
+        
+        .movetoend{
+            float:right;
+        }
+        
+        .myheading {
+            background-color:#286090;
+            color:#ffffff;
+        }
+        .stylethecontent{
+            font-size: 16px!important;
+        }
+     /*   
+        .dropdown-menu{
+            min-width: 202px !important;
+        }
+        
+        .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+            background-color: blanchedalmond !important;
+        }
+        .*/
+    
+    </style>
+			
+    
+    	<h3>ACCOUNTS 
+					</h3>
+
+				<div class ="col-lg-5 stylethistitle">
+                   <input type="checkbox" ng-model="checkedStatus" ng-change="ChangeviewAccount()">
+                    &nbsp;&nbsp; Show Deactivated Account
+            </div> 
+   <div class="col-lg-2 vheight1 movetoend" ng-show="showAddBtn" > <button class="btn btn-lg btn-primary newbtnstyle" ng-click="displayAddAccount()" >Add Account</button>
+
+			
+				</div>
+    <br>
+    
+        <div class="col-lg-10 myAccount" ng-if ="!showAddAccount && showListAccount  ">
+
+<div class="panel-body no-padding" style="display: block;">
+
+
+<table class="table table-striped">
+<thead>
+<tr class="myheading">
+   
+    
+        <th class="col-sm-2" >
+					<a href="" ng-click="sortkey='groupzcode';">{{data.type}} Code
+						<span class="glyphicon sort-icon" ng-show="sortkey=='groupzcode'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+					</a>
+				</th>
+    
+        <th class="col-sm-2" >
+				<a href="" ng-click="sortkey='groupzname';">Name
+						<span class="glyphicon sort-icon" ng-show="sortkey=='groupzname'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+				</a></th>
+       <th class="col-sm-2">
+			 <a href="" ng-click="sortkey='shortname';">Display Name
+						<span class="glyphicon sort-icon" ng-show="sortkey=='shortname'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+				</a></th>
+       <th class="col-sm-2" >
+			 <a href="" ng-click="sortkey='city';">City
+						<span class="glyphicon sort-icon" ng-show="sortkey=='city'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+				</a></th>
+       <th class="col-sm-2" >
+			 <a href="" ng-click="sortkey='state';">State
+					<span class="glyphicon sort-icon" ng-show="sortkey=='state'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+			</a></th>
+       <th class="col-sm-2">
+    
+</th>
+    </tr>
+    
+     
+    <tr>
+   
+    
+        <th class="col-sm-2" >
+<input type="text"  class="form-control" autocomplete="off" ng-model="model.selectGcode" placeholder="Search" ng-change="viewAccount()" /></th>
+
+        <th class="col-sm-2" >
+<input type="text"  class="form-control" autocomplete="off" ng-model="model.selectGname" placeholder="Search" ng-change="viewAccount()" /></th>
+         
+         <th class="col-sm-2" >
+<input type="text"  class="form-control" autocomplete="off" ng-model="model.selectShortName" placeholder="Search " ng-change="viewAccount()" /></th>
+        
+         <th class="col-sm-2" >
+<input type="text"  class="form-control" autocomplete="off" ng-model="model.selectCity" placeholder="Search" ng-change="viewAccount()" /></th>
+        
+         <th class="col-sm-2" >
+<input type="text"  class="form-control" autocomplete="off" ng-model="model.selectState" placeholder="Search" ng-change="viewAccount()" /></th>
+    </tr>
+    
+   
+
+    
+   
+    <tbody>
+        <tr dir-paginate="data in tableData |orderBy:sortkey:reverse|itemsPerPage:10" >
+				
+				    <td  class ="stylethecontent" >{{ data.groupzcode}}</td>
+            <td  class ="stylethecontent" >{{data.groupzname}}</td>
+            <td  class ="stylethecontent" >{{data.shortname}}</td>
+            <td  class ="stylethecontent" >{{data.city}}</td>
+            <td  class ="stylethecontent" >{{data.state}}</td>
+       
+       
+        
+            <td>   <div class="btn-group">
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
+<ul class="dropdown-menu">
+<li ng-click="editAccount(data)"><a>Edit</a></li>
+<li href="#myModal" id="myBtn" data-toggle="modal" data-target="#myModal" ng-click="getAssignRole(data)"><a>Roles</a></li>
+    
+ 
+
+<li ng-click="inviteLink()"><a>InvitationLink</a></li>
+<li ng-click="configuration()" ng-disabled><a>Configuration</a></li>
+<li ng-click="deactivateAccount(data)"><a>Deactivate</a></li>
+
+</ul>
+</div>
+       <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header mystylemodal">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">ROLES</h4>
+        </div>
+        <div class="modal-body">
+             <div class="form-group">
+                                <label class="control-label col-sm-10" for="groupz">Name of the Account*</label>
+                 
+                 
+                                <select class="form-control" ng-model="model.selectedValue" name="groupzname" ng-change="getselectval(model.selectedValue)" readonly disabled>
+                        <option ng-repeat="item in model.dropDownData track by $index" value="{{item}}">{{item}}</option>
+                    </select>
+                            </div>
+           <div class="form-group">
+               
+  
+                                
+               
+    <select class="form-control" name="role"
+          ng-model="model.rolename"
+          ng-change="getAssignRole(data,model.rolename)">
+    <option selected>Select Roles</option>
+    <option ng-repeat="role in model.assignroles track by $index"
+            value="{{role.rolename}}">{{role.rolename}}</option>
+  </select>
+ 
+               
+               <div >
+                     <table class="smalltable"> <!--ng-repeat="role in model.assignroles track by $index" >-->
+  <thead>
+   <!-- <tr>
+     
+      <th class="mytitle">{{role.divisionlabel}}</th>
+           <th class="mytitle">{{role.subdivisionlabel}}</th>
+        <th class="mytitle">{role.key}</th>
+
+    </tr>-->
+      <tr ng-repeat="(key, value) in roleInfo">
+    <td>{{ key }}</td>
+
+  <!--  <td ng-repeat="details in value">
+        <p ng-repeat"(subkey, subvalue) in details">{{ subkey }} : {{ subvalue }}</p>
+    </td>-->
+</tr>
+  </thead>
+  <tbody>
+      
+      <style>
+          .smalltable{
+              border: 1px solid !important;
+              width:500px !important;
+              
+          }
+          
+          .tbin{
+              width:150px;
+              height: 30px;
+          }
+          
+          .mytitle
+          {
+              font-size: 16px;
+          }
+      </style>
+  <tr>
+        <td ></td>
+        <td ></td>
+        <td ><input class="tbin" type = "text" {{row.maxcount}}/></td>
+        
+      </tr>
+ 
+    <!-- <tr>
+      <th scope="row"></th>
+      <td id="totals">{{totalcount}}</td>
+    </tr>-->
+  </tbody>
+</table>
+               </div>
+               
+                            </div>
+            
+            
+        </div>
+           
+          
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>          
+</td>
+  </tr>
+    </tbody>
+    
+<style>
+    .mystylemodal {
+        background-color: #286090!important;
+    color:#ffffff!important;
+    }
+    
+    </style>
+
+
+
+</table>
+      <script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+</script>
+
+<dir-pagination-controls
+       max-size="10"
+       direction-links="true"
+       boundary-links="true" >
+    </dir-pagination-controls>
+
+
+
+    </form>
+            </div>
+    </div>
+    
+    
+				<!--Personal Info Div-->
+				<div class="col-lg-10 myAccount" ng-if ="showAddAccount && !showListAccount">
+					<!--Personal Info Div-->
+				
+					<div class="well row table-responsive">
+						<form name="pForm" role="form">
+							<!--Personal Info Col--> 	
+							<div class="row">
+								<div class="form-group col-sm-4" ng-class="{ 'has-error': (pForm.fname.$dirty || pForm.$submitted) && pForm.fname.$invalid }" >
+									<label class="control-label l_font" for="aname"> Name of Account*</label>
+									<input class="form-control" type="text" name="aname" placeholder="Name of Account" ng-model="model.aname" />
+				                  
+				                   
+								</div>
+								<div class="form-group col-sm-4" ng-class="{ 'has-error': (pForm.lname.$dirty || pForm.$submitted) && pForm.lname.$invalid }" class="help-block">
+									<label class="control-label l_font">Display Name*</label>
+									<input class="form-control" type="text" name="dname" placeholder="Display Name" 
+									       ng-model="model.dname" />
+				                   
+								</div>
+								<div class="form-group col-sm-4" ng-class="{ 'has-error': (pForm.dname.$dirty || pForm.$submitted) && pForm.dname.$invalid}" >
+									<label class="control-label l_font" for="acode">Account Code*
+         <!--   <a class='my-tool-tip' data-toggle="tooltip" data-placement="right" title="Account code is your ....">  The class CANNOT be tooltip... 
+                <i class='glyphicon glyphicon-info-sign'></i>
+            </a>--></label>
+                                     
+                                   <!-- <script>$("a.my-tool-tip").tooltip();</script>-->
+									<input class="form-control" type="text" name="acode" placeholder="AcScount Code Name" ng-model="model.acode" ng-required="true" ng-pattern="/^[A-Za-z0-9_.]*$/" ng-minlength = "1"/>	
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-3" ng-class="{ 'has-error': (pForm.caddress.$dirty || pForm.$submitted) && pForm.caddress.$invalid }" class="help-block">                          
+									<label class="control-label l_font">Segment</label>
+									<select class="form-control" type="text"  Placeholder ="select Segment"
+									       ng-model="segment">
+                                        <option>Segment1</option>
+                                    </select>				                 
+								</div>
+						
+							</div>
+							<div class="row">
+						    <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="street">Street Address*</label>
+										
+									<input type="text" class="form-control"  ng-model="model.streeta" placeholder="Street Address"/>
+
+								</div> 
+                                
+                                 <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="area">Area*</label>
+										
+									<input type="text" class="form-control"  ng-model="model.area" placeholder="Area"/>
+
+								</div> 
+                                
+                                 <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="city">City*</label>
+										
+									<input type="text" class="form-control"  ng-model="model.city" placeholder="City"/>
+
+								</div> 
+                            </div>
+                                
+                                	<div class="row">
+						    <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="state">State*</label>
+										
+									<input type="text" class="form-control"  ng-model="model.state" placeholder="State"/>
+
+								</div> 
+                                
+                                 <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="country">Country*</label>
+										
+									<input type="text" class="form-control"  ng-model="model.country" placeholder="Country"/>
+
+								</div> 
+                                
+                                 <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="pincode">Pincode*</label>
+										
+									<input type="text" class="form-control"  ng-model="model.pincode" placeholder="Pincode"/>
+
+								</div> 
+                            </div>
+                                
+                            
+                            <div class="row">
+						    <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="glat">Geographical Latitude*</label>
+										
+									<input type="text" class="form-control"  ng-model="glat" placeholder="Latitude"/>
+
+								</div> 
+                                
+                                 <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="glot">Geographical Longitude*</label>
+										
+									<input type="text" class="form-control"  ng-model="glot" placeholder="Longitude"/>
+
+								</div> 
+                                
+                               
+                            </div>
+                                <div class="row">
+								<div class="form-group col-sm-4" ng-class="{ 'has-error': ((pForm.ccode.$dirty || pForm.$submitted) && pForm.ccode.$invalid) || ((pForm.mobile.$dirty || pForm.$submitted) && pForm.mobile.$invalid) }" class="help-block">
+									<label class="control-label l_font" for="mno">Mobile Number*</label>
+									<div class="input-group">
+										<input class="form-control" style = "width:25%;" type="text" name="ccode"  ng-model="ccode"  ng-pattern="/^[0-9]*$/"/>        
+										<input class="form-control" style = "width:70%;" type="text" name="mobile" ng-model="mobile" ng-pattern="/^[0-9]*$/"/>
+				                         
+                                       
+									</div>
+                                    </div>
+                                    
+                                    <div class="form-group col-sm-5" ng-class="{ 'has-error': ((pForm.ccode.$dirty || pForm.$submitted) && pForm.ccode.$invalid) || ((pForm.mobile.$dirty || pForm.$submitted) && pForm.mobile.$invalid) }" class="help-block">
+									<label class="control-label l_font" for="lno">Landline  Number*</label>
+									<div class="input-group">
+										<input class="form-control" style = "width:15%;" type="text" name="lcode1"ng-model="lcode1" ng-pattern="/^[0-9]*$/"/>
+                                        <input class="form-control" style = "width:15%;" type="text" name="lcode2" ng-model="lcode2"  ng-pattern="/^[0-9]*$/"/>
+                                        
+										<input class="form-control" style = "width:70%;" type="text" name="lno" ng-model="lno" ng-pattern="/^[0-9]*$/"/>
+				                         
+                                       
+									</div>
+								</div>
+                            </div>
+                            <div class="row">
+								<div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.email.$dirty && pForm.email.$error.required }">
+									<label class="control-label l_font" for="smsid">Send ID for SMS*</label>
+									<input class="form-control" type="text" name="smsid"  placeholder="SMSID" ng-model="smsid" />	
+								</div>
+                                <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.email.$dirty && pForm.email.$error.required }">
+									<label class="control-label l_font" for="email">Email*</label>
+									<input class="form-control" type="text" name="email"  placeholder="Email Id" ng-model="email" />	
+								</div>
+							</div>
+							
+							<br><br>
+							<div class="row col-lg-12">
+								<div class="form-group">	
+									<button class="btn btn-primary" type="submit" 
+										    ng-disabled="pForm.$invalid || dataLoading" ng-click="saveAccount()">Save and Add Role</button>
+									<!--<button class="btn btn-primary" type="submit" ng-click="view('profile');" ng-show="pEditMode">Cancel</button>-->
+                                    <button class="btn btn-primary"  ng-click="cancelAccount()">Cancel</button>
+									<img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+    
+    
+    <!--Edit Accounts-->
+    
+<div class="col-lg-10 myAccount" ng-if ="showEditAccount && !showAddAccount && !showListAccount">
+					<!--Personal Info Div-->
+				
+					<div class="well row table-responsive">
+						<form name="pForm" role="form">
+							<!--Personal Info Col--> 	
+							<div class="row">
+								<div class="form-group col-sm-4" ng-class="{ 'has-error': (pForm.fname.$dirty || pForm.$submitted) && pForm.fname.$invalid }" >
+									<label class="control-label l_font" for="aname"> Name of Account*</label>
+									<input class="form-control" type="text" name="aname" placeholder="Name of Account" ng-model="model.aname" />
+				                  
+				                   
+								</div>
+								<div class="form-group col-sm-4" ng-class="{ 'has-error': (pForm.lname.$dirty || pForm.$submitted) && pForm.lname.$invalid }" class="help-block">
+									<label class="control-label l_font">Display Name*</label>
+									<input class="form-control" type="text" name="dname" placeholder="Display Name" 
+									       ng-model="model.dname" />
+				                   
+								</div>
+								<div class="form-group col-sm-4" ng-class="{ 'has-error': (pForm.dname.$dirty || pForm.$submitted) && pForm.dname.$invalid}" >
+									<label class="control-label l_font" for="acode">Account Code*
+         <!--   <a class='my-tool-tip' data-toggle="tooltip" data-placement="right" title="Account code is your ....">  The class CANNOT be tooltip... 
+                <i class='glyphicon glyphicon-info-sign'></i>
+            </a>--></label>
+                                     
+                                   <!-- <script>$("a.my-tool-tip").tooltip();</script>-->
+									<input class="form-control" type="text" name="acode" placeholder="AcScount Code Name" ng-model="model.acode" ng-required="true" ng-pattern="/^[A-Za-z0-9_.]*$/" ng-minlength = "1"/>	
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-3" ng-class="{ 'has-error': (pForm.caddress.$dirty || pForm.$submitted) && pForm.caddress.$invalid }" class="help-block">                          
+									<label class="control-label l_font">Segment</label>
+									<select class="form-control" type="text"  Placeholder ="select Segment"
+									       ng-model="segment">
+                                        <option>Segment1</option>
+                                    </select>				                 
+								</div>
+						
+							</div>
+							<div class="row">
+						    <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="street">Street Address*</label>
+										
+									<input type="text" class="form-control"  ng-model="model.streeta" placeholder="Street Address"/>
+
+								</div> 
+                                
+                                 <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="area">Area*</label>
+										
+									<input type="text" class="form-control"  ng-model="model.area" placeholder="Area"/>
+
+								</div> 
+                                
+                                 <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="city">City*</label>
+										
+									<input type="text" class="form-control"  ng-model="model.city" placeholder="City"/>
+
+								</div> 
+                            </div>
+                                
+                                	<div class="row">
+						    <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="state">State*</label>
+										
+									<input type="text" class="form-control"  ng-model="model.state" placeholder="State"/>
+
+								</div> 
+                                
+                                 <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="country">Country*</label>
+										
+									<input type="text" class="form-control"  ng-model="model.country" placeholder="Country"/>
+
+								</div> 
+                                
+                                 <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="pincode">Pincode*</label>
+										
+									<input type="text" class="form-control"  ng-model="model.pincode" placeholder="Pincode"/>
+
+								</div> 
+                            </div>
+                                
+                            
+                            <div class="row">
+						    <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="glat">Geographical Latitude*</label>
+										
+									<input type="text" class="form-control"  ng-model="glat" placeholder="Latitude"/>
+
+								</div> 
+                                
+                                 <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.dob.$dirty && pForm.dob.$error.required && !pForm.dob.$error.pattern}">
+				                    <label class="control-label l_font" for="glot">Geographical Longitude*</label>
+										
+									<input type="text" class="form-control"  ng-model="glot" placeholder="Longitude"/>
+
+								</div> 
+                                
+                               
+                            </div>
+                                <div class="row">
+								<div class="form-group col-sm-4" ng-class="{ 'has-error': ((pForm.ccode.$dirty || pForm.$submitted) && pForm.ccode.$invalid) || ((pForm.mobile.$dirty || pForm.$submitted) && pForm.mobile.$invalid) }" class="help-block">
+									<label class="control-label l_font" for="mno">Mobile Number*</label>
+									<div class="input-group">
+										<input class="form-control" style = "width:25%;" type="text" name="ccode"  ng-model="ccode"  ng-pattern="/^[0-9]*$/"/>        
+										<input class="form-control" style = "width:70%;" type="text" name="mobile" ng-model="mobile" ng-pattern="/^[0-9]*$/"/>
+				                         
+                                       
+									</div>
+                                    </div>
+                                    
+                                    <div class="form-group col-sm-5" ng-class="{ 'has-error': ((pForm.ccode.$dirty || pForm.$submitted) && pForm.ccode.$invalid) || ((pForm.mobile.$dirty || pForm.$submitted) && pForm.mobile.$invalid) }" class="help-block">
+									<label class="control-label l_font" for="lno">Landline  Number*</label>
+									<div class="input-group">
+										<input class="form-control" style = "width:15%;" type="text" name="lcode1"ng-model="lcode1" ng-pattern="/^[0-9]*$/"/>
+                                        <input class="form-control" style = "width:15%;" type="text" name="lcode2" ng-model="lcode2"  ng-pattern="/^[0-9]*$/"/>
+                                        
+										<input class="form-control" style = "width:70%;" type="text" name="lno" ng-model="lno" ng-pattern="/^[0-9]*$/"/>
+				                         
+                                       
+									</div>
+								</div>
+                            </div>
+                            <div class="row">
+								<div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.email.$dirty && pForm.email.$error.required }">
+									<label class="control-label l_font" for="smsid">Send ID for SMS*</label>
+									<input class="form-control" type="text" name="smsid"  placeholder="SMSID" ng-model="smsid" />	
+								</div>
+                                <div class="form-group col-sm-4" ng-class="{ 'has-error': pForm.email.$dirty && pForm.email.$error.required }">
+									<label class="control-label l_font" for="email">Email*</label>
+									<input class="form-control" type="text" name="email"  placeholder="Email Id" ng-model="email" />	
+								</div>
+							</div>
+							
+							<br><br>
+							<div class="row col-lg-12">
+								<div class="form-group">	
+									<button class="btn btn-primary" type="submit" 
+										    ng-disabled="pForm.$invalid || dataLoading" ng-click="updateAccount(data)">Save</button>
+									<!--<button class="btn btn-primary" type="submit" ng-click="view('profile');" ng-show="pEditMode">Cancel</button>-->
+                                    <button class="btn btn-primary"  ng-click="cancelAccount()">Cancel</button>
+									<img ng-if="dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+    
+    </div>
+    
+  
+   
+    
+
+    
+    
+    
+    
+    
+    <!--profile starts here-->
+    
+    <div class="col-md-10" ng-if="displayProfile">
+        <div class="col-md-12 profile_block">
+            <h2 class="profile-name" style="color: #938787;">PROFILE / Family<span class="pull-right"> <button 
+        style="font-size: smaller;background-color: #4f85d8;border: none;color: white; padding: 6px 25px 5px 30px;">Add Family Menber</button></span></h2>
+            <div class="profile_row1 row" ng-repeat="item in allMembers">
+                <div class="pull-right"><img class="edit_img"  style="width: 50px;"  ng-show="!edit" ng-click="edit=true" src="css/images/edit.png"></div>
+                <div class="row col-md-12">
+                    <div class="col-md-1"><img style="width:200px;" src="{{item.membersdetails.profileurl}}"></div>
+                    <table class="col-md-7" ng-show="!edit" style="margin-left: 90px;">
+                        <tr>
+                            <td><b>Name</b></td>
+                            <td>{{details.name}}</td>
+                            <td><b>Relationship</b></td>
+                            <td>{{item.membersdetails.morememinfo.relationship}}</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Number</td>
+                            <td>{{details.mobile.countrycode}} {{details.mobile.mobilenumber}}</td>
+                            <td>Email</td>
+                            <td>{{details.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth</td>
+                            <td>{{details.dateofbirth}}</td>
+                            <td>Blood Group</td>
+                            <td>{{details.bloodgroup}}</td>
+                        </tr>
+                    </table>
+                    <table class="col-md-8" ng-show="edit" style="margin-left: 90px;">
+                        <tr>
+                            <td><b>Name</b></td>
+                            <td><b>{{details.name}}</b></td>
+                        </tr>
+                        <tr>
+                            <td>Application Number </td>
+                            <td>{{details.profileid}}</td>
+                            <td>Date of Admission</td>
+                            <td>{{details.startdatevalue.year}}-{{details.startdatevalue.month}}-{{details.startdatevalue.day}}</td>
+                            <td>Email</td>
+                            <td>{{details.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Division</td>
+                            <td>{{details.divisionvalue}}</td>
+                        </tr>
+                        <tr>
+                            <td>Subdivision</td>
+                            <td>{{details.subdivisionvalue}}</td>
+                        </tr>
+                    </table>
+                    <hr class="col-md-8" ng-show="edit" style="margin-left: 265px;">
+                    <table class="col-md-10" ng-show="edit" style="margin-left: 265px;">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><img class="pull-right" style="width: 50px;" ng-show="!editdetails" ng-click="editdetails=true" src="css/images/edit.png"></td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td><span ng-show="!editdetails">{{details.gender}}</span>
+                                <input ng-show="editdetails"   type="text" ng-model="details.gender" />
+                            </td>
+                            <td>Date of Birth</td>
+                            <td><span ng-show="!editdetails">{{details.dateofbirth}}</span>
+                                <div ng-show="editdetails"> <input type="text" id="dobdate" ng-model="details.dateofbirth"     ng-required="true"  
+                                            data-format="DD-MMM-YYYY" data-template="DD-MMM-YYYY" name="dobdate" value="{{details.dateofbirth}}"/>
+</div></td>
+                            <td>Blood Group</td>
+                            <td><span ng-show="!editdetails">{{details.bloodgroup}}</span>
+                                <span ng-show="editdetails"><input type="text" ng-model="details.bloodgroup"/></span></td>
+                                <td></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Number</td>
+                            <td><span ng-show="!editdetails">{{details.mobile.countrycode}} {{details.mobile.mobilenumber}}</span>
+                                <span><input ng-show="editdetails" style="width:70px" type="text" ng-model="details.mobile.countrycode"/><input  ng-show="editdetails"  style="width:315px" type="text" ng-model="details.mobile.mobilenumber"/></span></td>
+                            <td> </td>
+                            <td>Landline Number</td>
+                            <td><span ng-show="!editdetails">{{details.landline.landlinenumber}}</span>
+                                <span><input  ng-show="editdetails" type="text" ng-model="details.landline"/></span></td>
+                        </tr>
+                    </table>
+                    <table class="col-md-8" ng-show="edit" style="margin-left: 260px;">
+                        <tr>
+                            <td>Hobbies</td>
+                                <td>
+                                <span ng-show="!editdetails">{{details.hobbies}}</span>
+                                <span><textarea ng-show="editdetails"  ng-model="details.hobbies"></textarea><span></td>
+                                <td></td><td></td>
+                            </tr>
+                        <tr><td>Additional Info</td><td><span ng-show="!editdetails">{{details.additionalinfo}}</span><span><textarea ng-show="editdetails" ng-model="details.additionalinfo"></textarea></span></td>
+                        </tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr>
+                            <td><a>View Family Details</a></td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td>
+                                <button style="width: 350px;color: white;background: rgb(66, 139, 211);" 
+                                ng-click="saveProfile()">Save</button>
+                            </td>
+                            <td>
+                                <button style="width: 350px;color: white;background: rgb(66, 139, 211);"
+                                 ng-click="cancelProfile()">Cancel</button>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+ 
+    
+    
+  
+
+  
+  
+    <footer class="footer text-center col-sm-12">
+        <p>Groupz</p>
+    </footer>
+</body>
+
+</html>

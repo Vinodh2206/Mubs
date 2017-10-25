@@ -1,0 +1,123 @@
+
+    
+       .firstmenu1 {
+      margin-bottom: 0;
+    }
+    
+    .firstmenu1 li{
+        padding-left:0px;
+    }
+    
+    .firstmenu1 .navbar-brand {
+        padding-left:15px;
+    } 
+.top-color {
+      background-color: #14b1bb;
+      margin-bottom: 0;
+    }
+    .firstmenu1 {
+      margin-bottom: 0;
+    }
+
+    
+    
+@media (min-width: 768px) {
+    
+    
+          .top-color{
+		width:100%;
+        margin: 0;
+		height:5em;
+		padding-top:10px;
+        text-align: center;
+		background:	#14b1bb;
+        padding-bottom: 30px;
+		
+	} 
+        .firstmenu1 .navbar-brand {
+        padding-left:155px;
+    }
+         .firstmenu1 li{
+        padding-left:50px;
+
+             
+    }
+        
+
+        
+        
+        select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+        }
+    
+    
+    .verticalmenu1 .navbar-toggle {
+  display: none ;
+}
+.navbar.verticalmenu1 {
+  width: 200px;
+  height: 1000px;
+    float:left;
+    }
+.verticalmenu1 .collapse.navbar-collapse.navbar-ex1-collapse {
+  display: block;
+  float: left;
+ 
+}
+    .verticalmenu1 .active {
+            width:200px;
+            
+        }
+    
+    
+     .verticalmenu1 .navbar-collapse {
+        height: auto;
+        border-top: 0;
+        box-shadow: none;
+        max-height: none;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    .verticalmenu1  .navbar-collapse.collapse {
+        display: block !important;
+        width: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+      }
+     .verticalmenu1 .navbar-collapse.in {
+        overflow-x: visible;
+      }
+    .verticalmenu1  .navbar {
+        max-width: 100px;
+        margin-right: 0;
+        margin-left: 0;
+      }
+     .verticalmenu1 .navbar-nav,
+      .verticalmenu1 .navbar-nav > li,
+     .verticalmenu1 .navbar-left,
+     .verticalmenu1 .navbar-right,
+     .verticalmenu1 .navbar-header {
+        float: none !important;
+      }
+     .verticalmenu1 .navbar-right .dropdown-menu {
+        left: 0;
+        right: auto;
+      }
+    .verticalmenu1  .navbar-collapse .navbar-nav.navbar-right:last-child {
+        margin-right: 0;
+      }
+    
+     .vmenu{
+            text-align: center;
+        }
+    }
+
+        .myprofile{
+            padding-left: 60px;
+            padding-top: -30px;
+        }
+   
+
+         

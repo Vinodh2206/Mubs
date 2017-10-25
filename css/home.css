@@ -1,0 +1,273 @@
+<style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        
+        /*.navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+            border-color: white;
+            height: 6em;
+            padding-top: 12px;
+            background-color: #2eb2f2;
+        }*/
+
+.navbar-collapse {
+    background-color: #2eb2f2;
+}
+.navbar-nav {
+    background-color: #555;
+}
+.container-fluid {
+    background-color: #2eb2f2;
+}
+.dropdown {
+    background-color: #2eb2f2;
+}
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        
+        .row.content {
+            height: 1000px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+            text-decoration-color: black;
+        }
+        /* Set black background color, white text and some padding */
+        
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        
+       @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+        
+        canvas {
+            padding: 0 30px 0 0;
+        }
+        
+        .imgsize {
+            
+            height:50px;
+            width:50px;
+        }
+        
+        .tsize {
+            
+            font-size: 10px;
+            
+        }
+
+
+    
+       .firstmenu {
+      margin-bottom: 0;
+    }
+    
+    .firstmenu li{
+        padding-left:0px;
+    }
+    
+    .firstmenu .navbar-brand {
+        padding-left:15px;
+    } 
+.top-color {
+      background-color: aquamarine;
+      margin-bottom: 0;
+    }
+    .firstmenu {
+      margin-bottom: 0;
+    }
+
+    
+    
+@media (min-width: 768px) {
+    
+    
+          .top-color{
+		width:100%;
+        margin: 0;
+		height:5em;
+		padding-top:10px;
+        text-align: center;
+		background:	#3399ff;
+        padding-bottom: 30px;
+		
+	} 
+        .firstmenu .navbar-brand {
+        padding-left:155px;
+    }
+         .firstmenu li{
+        padding-left:50px;
+
+             
+    }
+        
+
+        
+        
+        select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+        }
+    
+    
+    .verticalmenu .navbar-toggle {
+  display: none ;
+}
+.navbar.verticalmenu {
+  width: 200px;
+  height: 1000px;
+    float:left;
+    }
+.verticalmenu .collapse.navbar-collapse.navbar-ex1-collapse {
+  display: block;
+  float: left;
+ 
+}
+    .verticalmenu .active {
+            width:200px;
+            
+        }
+    
+    
+     .verticalmenu .navbar-collapse {
+        height: auto;
+        border-top: 0;
+        box-shadow: none;
+        max-height: none;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    .verticalmenu  .navbar-collapse.collapse {
+        display: block !important;
+        width: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+      }
+     .verticalmenu .navbar-collapse.in {
+        overflow-x: visible;
+      }
+    .verticalmenu  .navbar {
+        max-width: 100px;
+        margin-right: 0;
+        margin-left: 0;
+      }
+     .verticalmenu .navbar-nav,
+      .verticalmenu .navbar-nav > li,
+     .verticalmenu .navbar-left,
+     .verticalmenu .navbar-right,
+     .verticalmenu .navbar-header {
+        float: none !important;
+      }
+     .verticalmenu .navbar-right .dropdown-menu {
+        left: 0;
+        right: auto;
+      }
+    .verticalmenu  .navbar-collapse .navbar-nav.navbar-right:last-child {
+        margin-right: 0;
+      }
+    
+     .vmenu{
+            text-align: center;
+        }
+    }
+
+        .myprofile{
+            padding-left: 60px;
+            padding-top: -30px;
+        }
+   
+
+         
+
+.profileullist {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 130px;
+    
+    overflow: hidden;
+   
+}
+
+.profilelist {
+    float: left;
+    color:0489B1;
+        
+        padding: 16px 20px;
+    border-right:1px solid grey;
+
+
+        
+
+}
+      .profilelist:last-child {
+    border-right: none;
+}
+
+
+.profilelist a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding-top:3px;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+.profilelist a:hover {
+    background-color: none;
+    height:100%;
+        text-decoration: none;
+
+}
+        
+
+     
+    
+        .profile {
+            font-size: 25px;
+            padding-left: 130px;
+            padding-bottom: -50px;
+        }
+        
+.profilelist .active {
+    color:#0489B1;
+    text-decoration: none;
+}
+        
+  
+       .prgbar
+        {
+            font-style: italic;
+            font-family: cursive;
+        }
+
+        /*rect{
+                width:30px!important;
+               stroke-width:50px!important;
+              }*/
+
+        .barchart {
+               border: 1px;
+               color: black;
+            stroke-width: 2px;
+            
+           }    
+        
+
+</style>

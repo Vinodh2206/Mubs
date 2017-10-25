@@ -1,0 +1,193 @@
+<html>
+    
+<head>
+    <title>Form</title>
+</head>
+
+<body>
+     
+<style>
+.container {
+   /* width: 1300px;
+    border: 1px solid black;
+    padding: 25px;*/
+}
+</style>
+<nav class="navbar top-color">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Node Validator</a>
+                </div>
+                <div class="nav navbar-right" style="padding-top:6px;">
+                    <div class="dropdown">
+                        <span uib-dropdown is-open="status.isopen">
+     <img class="img-ircle dropdown-toggle profilepic" uib-dropdown-toggle width="40" height="40" style="padding:1px" src="css/images/bell1.png" />
+      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+        <li role="menuitem"><a href="#/login">Logout</a></li>
+      </ul>
+    </span>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </nav><br>
+<div class="container" align="center"> <!--ng-if="!showTable && showForm"-->
+		    <div ng-controller="formController" class="business">
+			<form name="form" ng-if="!showTable && showForm">
+			<div class="form-group">
+			<label class="control-label" for="cachefunction">Function Type</label>
+                 <input type="text" class="form-control" id="cachefunction" name="cachefunction" ng-model="cachefunction" placeholder="Enter Cache Function Type" required/>
+            </div>
+			<div class="form-group">
+			<label class="control-label" for="backendservice">Content Service Type</label>
+                 <input type="text" class="form-control" id="backendservice" name="backendservice" ng-model="backendservice" placeholder="Enter Backend Service Type" required/>
+            </div>
+			<div class="form-group">
+			<label class="control-label" for="backendfunction">Content Function Service Type</label>
+                 <input type="text" class="form-control" id="backendfunction" name="backendfunction" ng-model="backendfunction" placeholder="Enter Backend Function Type" required/>
+            </div>
+			<div class="form-group">
+              <label class="control-label" for="offset" >Role Offset</label>
+              <select class="form-control" ng-model="offset" id="select" data-toggle="tooltip" title="select *  for All and Admin for Admin" data-placement="right">
+                <option value='' selected>choose Role</option>
+              <option>*</option>
+              <option>Admin</option>
+              </select>
+			</div>
+			<div class="form-group">
+			<label class="control-label" for="groupz">Groupz Module Name</label>
+                 <input type="text" class="form-control" id="groupz" name="groupz" ng-model="groupz" placeholder="Groupz Module Name" required/>
+            </div>
+			<div class="form-group">
+			<label class="control-label" for="url">URL</label>
+                 <input type="text" class="form-control" id="url" name="url" ng-model="url" placeholder="Enter Backend URL" required/>
+            </div>
+			<button type="submit" class="btn btn-primary" ng-click="submit()" ng-disabled="form.$invalid">Submit</button>
+			</form>
+                 <div class="table" ng-if="showTable && !showForm">
+                     <h2>Table</h2>
+<table class="table table-striped ">
+  <thead>
+    <tr>
+      <th>Function Type</th>
+      <th>Content Service Type</th>
+      <th>Content Function Service Type</th>
+        <th>Role Offet</th>
+        <th>Groupz Module Name</th>
+        <th>URL</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  <tr class="tabledatas" ng-repeat="data in dataValues">
+        <td class="tabledatas">{{data.functiontype}}</td>
+        <td class="tabledatas">{{data.contentservicetype}}</td>
+        <td class="tabledatas">{{data.contentfunctiontype}}</td>
+        <td class="tabledatas">{{data.roleoffset}}</td>
+        <td class="tabledatas">{{data.groupzmodulename}}</td>
+        <td class="tabledatas">{{data.uri}}</td>
+      <td><button type="button" class="btn btn-primary" aria-haspopup="true" aria-expanded="false" ng-click= "updateForm(data)" onclick="#myModal" id="myBtn" data-toggle="modal" data-target="#myModal">Edit</button></td>
+  </tr>
+      
+
+  </tbody>
+</table>
+    </div> 
+                 <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Edit</h4>
+        </div>
+        <div class="modal-body">
+          <form name="form">
+			<div class="form-group">
+			<label class="control-label" for="cachefunction">Function Type</label>
+                 <input type="text" class="form-control" id="cachefunctions" name="cachefunctions" ng-model="newcacheFn" placeholder="Enter Cache Function Type" required/>
+            </div>
+			<div class="form-group">
+			<label class="control-label" for="backendservice">Content Service Type</label>
+                 <input type="text" class="form-control" id="backendservices" name="backendservices" ng-model="newbackSer" placeholder="Enter Backend Service Type" required/>
+            </div>
+			<div class="form-group">
+			<label class="control-label" for="backendfunction">Content Function Service Type</label>
+                 <input type="text" class="form-control" id="backendfunctions" name="backendfunctions" ng-model="newbackCon" placeholder="Enter Backend Function Type" required/>
+            </div>
+			<div class="form-group">
+              <label class="control-label" for="offset" >Role Offset</label>
+              <select class="form-control" ng-model="newOffset" id="select" data-toggle="tooltip" title="select *  for All and Admin for Admin" data-placement="right">
+                <option value='' selected>choose Role</option>
+              <option>*</option>
+              <option>Admin</option>
+              </select>
+			</div>
+			<div class="form-group">
+			<label class="control-label" for="groupz">Groupz Module Name</label>
+                 <input type="text" class="form-control" id="groupzs" name="groupzs" ng-model="newGroupz" placeholder="Groupz Module Name" required/>
+            </div>
+			<div class="form-group">
+			<label class="control-label" for="url">URL</label>
+                 <input type="text" class="form-control" id="urls" name="urls" ng-model="newUrl" placeholder="Enter Backend URL" required/>
+            </div>
+			<button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">Submit</button>
+			</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    
+    </div>
+</div>
+   
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+      <script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+    
+</body>
+</html>
+<!--<h1>Hi {{vm.user.firstName}}!</h1>
+<p>You're logged in!!</p>
+<h3>All registered users:</h3>
+<ul>
+    <li ng-repeat="user in vm.allUsers">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a href="#" ng-click="vm.deleteUser(user.id)">Delete</a>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="#/login" class="btn btn-primary">Logout</a></p>-->
